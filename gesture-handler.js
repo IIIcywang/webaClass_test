@@ -18,12 +18,9 @@ AFRAME.registerComponent("gesture-handler", {
 
         this.el.sceneEl.addEventListener("markerFound", (e) => {
             this.isVisible = true;
-            var name = prompt("請輸入您的名字", "");
-            if (name) //如果返回的有內容  
-            {
-                alert("歡迎您：" +
-                    name)
-            }
+            console.log(this.detail);
+
+
 
         });
 

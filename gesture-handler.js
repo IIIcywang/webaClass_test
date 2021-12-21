@@ -18,13 +18,17 @@ AFRAME.registerComponent("gesture-handler", {
 
         this.el.sceneEl.addEventListener("markerFound", (e) => {
             this.isVisible = true;
+            if (confirm("你確定提交嗎？")) {
+                alert("點選了確定");
+            } else {
+                alert("點選了取消");
+            }
 
-            console.log("marker Found3" + this.el.sceneEl.AFRAME.marker);
         });
 
         this.el.sceneEl.addEventListener("markerLost", (e) => {
             this.isVisible = false;
-            console.log("marker lost3" + this.el.AFRAME.marker)
+            // console.log("marker lost3" + this.el.AFRAME.marker)
 
         });
     },

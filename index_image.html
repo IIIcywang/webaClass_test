@@ -17,9 +17,11 @@
         <a-marker preset="kanji">
             <a-box position='0 0.5 0' material='color: yellow;'></a-box>
             <script>
-                function sayHello() {
-                    alert('Hello');
-                }
+                var sayHello = function() {
+                    console.log('Hello');
+                };
+
+                sayHello(); // "Hello"
             </script>
 
 
